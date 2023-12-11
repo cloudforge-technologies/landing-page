@@ -20,10 +20,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Building react app...
-        run: npm run build 
       - name: checking wd
         run: pwd
+      - name: Building react app...
+        run: npm run build 
   deploy:
     runs-on: ubuntu-latest
     needs: build
