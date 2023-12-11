@@ -10,6 +10,8 @@ jobs:
           node-version: 18
       - name: Installing dependencies...
         run: npm install
+      - name: checking pwd
+        run: pwd
   build:
     runs-on: ubuntu-latest
     needs: install
@@ -20,6 +22,8 @@ jobs:
           node-version: 18
       - name: Building react app...
         run: npm run build 
+      - name: checking wd
+        run: pwd
   deploy:
     runs-on: ubuntu-latest
     needs: build
