@@ -28,6 +28,8 @@ jobs:
           aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+      - name: Cleaning up...
+        run: rm -rf ./*
       - name: Grabing build...
         uses: actions/download-artifact@v3
         with:
